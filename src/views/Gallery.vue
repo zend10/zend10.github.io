@@ -7,7 +7,7 @@
     <div class="modal" v-if="data.selectedImage" v-on:click="closeModal()">
       <span class="close" v-on:click="closeModal()">&times;</span>
       <img class="modal-image" v-bind:src="data.selectedImage.imagePath">
-      <div class="modal-name">{{ data.selectedImage.name }}</div>
+      <div class="modal-name">{{ data.selectedImage.name }} ({{ data.selectedImage.country }})</div>
       <div class="modal-date">{{ data.selectedImage.date }}</div>
       <div class="modal-caption">{{ data.selectedImage.caption }}</div>
     </div>
@@ -48,7 +48,7 @@ export default {
 
 firebase.database().ref('gallery').once('value').then(function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
-    data.gallery.push(childSnapshot.val())
+    data.gallery.unshift(childSnapshot.val())
     data.isLoading = false
   })
 })
@@ -90,13 +90,11 @@ firebase.database().ref('gallery').once('value').then(function(snapshot) {
   display: block;
   width: auto;
   height: 80vh;
-  max-width: 700px;
 }
 
 .modal-name, .modal-date, .modal-caption {
   display: block;
   margin: auto;
-  max-width: 700px;
   text-align: center;
   color: white;
 }
@@ -146,6 +144,7 @@ firebase.database().ref('gallery').once('value').then(function(snapshot) {
 @media only screen and (max-width: 700px) {
   .modal-image {
     width: 100%;
+    height: auto;
   }
 }
 </style>

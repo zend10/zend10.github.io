@@ -32,10 +32,6 @@ export default {
         {
           title: 'GALLERY',
           route: '/gallery'
-        },
-        {
-          title: 'WRITINGS',
-          route: '/writings'
         }
       ]
     }
