@@ -48,6 +48,7 @@ h2 {
   padding: 0;
   margin: 0;
   margin-bottom: 2vh;
+  word-wrap: break-word;
 }
 
 a {

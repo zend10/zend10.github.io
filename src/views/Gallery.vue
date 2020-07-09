@@ -101,7 +101,6 @@ firebase.database().ref('gallery').once('value').then(function(snapshot) {
 
 .modal-name {
   margin-top: 2vh;
-  height: 5vh;
   font-size: 1.2rem;
 }
 
@@ -145,6 +144,10 @@ firebase.database().ref('gallery').once('value').then(function(snapshot) {
   .modal-image {
     width: 100%;
     height: auto;
+  }
+
+  .modal-name {
+    font-size: 1.1rem;
   }
 }
 </style>
