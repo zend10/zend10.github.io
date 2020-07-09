@@ -40,6 +40,22 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(./assets/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(./assets/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url(./assets/SourceSansPro-Bold.ttf);
+    font-weight: bold;
+}
+
 html, body {
   padding: 0;
   margin: 0;
