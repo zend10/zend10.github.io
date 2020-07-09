@@ -23,7 +23,7 @@ export default {
       menus: [
         {
           title: 'PROFILE',
-          route: '/profile'
+          route: '/'
         },
         {
           title: 'PROJECTS',
@@ -32,6 +32,10 @@ export default {
         {
           title: 'GALLERY',
           route: '/gallery'
+        },
+        {
+          title: 'WRITINGS',
+          route: '/writings'
         }
       ]
     }
@@ -90,8 +94,8 @@ nav a:hover {
 
 main {
   background: white;
-  width: 80%;
-  padding: 5vh 5vw;
+  width: 80vw;
+  padding: 5vw;
   margin: 0 auto;
 }
 
