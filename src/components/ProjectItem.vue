@@ -1,15 +1,15 @@
 <template>
   <div class="project-item">
     <div class="project-logo">
-      <a v-bind:href="data.otherLink ? data.otherLink : data.githubLink"><img v-bind:src="data.logo" loading="lazy"></a>
+      <a v-bind:href="data.otherLink ? data.otherLink : data.githubLink" rel="noopener" target="_blank"><img v-bind:src="data.logo" loading="lazy"></a>
     </div>
     <div class="project-info">
       <div>
-        <h2><a v-bind:href="data.otherLink ? data.otherLink : data.githubLink">{{ data.name }}</a></h2>
+        <h2><a v-bind:href="data.otherLink ? data.otherLink : data.githubLink" rel="noopener" target="_blank">{{ data.name }}</a></h2>
       </div>
       <span>{{ data.description }}</span>
       <div class="project-github" v-if="data.githubLink">
-        <a v-bind:href="data.githubLink">Source Code</a>
+        <a v-bind:href="data.githubLink" rel="noopener" target="_blank">Source Code</a>
       </div>
     </div>
   </div>
